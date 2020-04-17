@@ -47,36 +47,44 @@ table {
 	border-spacing: 0;
 }
 
+html {
+    font-size: 62.5%;
+}
 
 h1 {
     color: pink;
     font-family: fantasy; 
-    font-size: 60px;
+    font-size: 6rem;
     display: flex;
     justify-content: center;
     margin-top: 100px;
-    text-shadow: white 1px 0 10px;
+    text-shadow: white 0.1rem 0 1rem;
     text-decoration: white underline dotted;
+    border-bottom: white 1px dashed;
 }
 
 
 h2{
-    font-size: 40px;
+    font-size: 4rem;
     display: flex;
     justify-content: center;
     font-family: fantasy;
     margin-top: 70px;
+    color: white;
 }
 
 p{
     font-family: 'Courier New', Courier, monospace;
     padding: 10px;
     color: pink;
+    font-size: 1.5rem;
+    border: 1px white dashed;
+    text-align: center;
 }
 
 img{
     border-radius: 20px;
-    border:white 3px solid;
+    border:white 2px solid;
     margin: 10px;
 }
 
@@ -92,11 +100,12 @@ footer{
     display: flex;
     justify-content: center;
     text-align: center;
+    border-top: 2px white dashed;
 }
 
 footer h3{
     color: black;
-    font-size: 30px;
+    font-size: 3rem;
     padding: 30px;
 }
 
@@ -117,6 +126,7 @@ nav a{
     background-color: lightpink;
     color: black;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
 }
 
 .main{
@@ -132,7 +142,7 @@ nav a{
 }
 
 .main img{
-    width: 1000px;
+    width: 90vw;
     height: 600px;
 }
 
@@ -141,3 +151,26 @@ nav a{
     letter-spacing: 1px;
 }
 
+@media (max-width: 800px) {
+    .main img{
+        width: 90vw;
+        height: 350px;
+    }
+    .projects img{
+        width: 30vw;
+    }
+    .projects {
+        flex-wrap: wrap-reverse;
+    }
+}
+
+@media (max-width: 500px){
+    .main img{
+        width: 90vw;
+        height: 200px;
+    }
+    .projects{
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+}
